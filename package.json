@@ -2,6 +2,8 @@
   "name": "sly-web-root",
   "version": "1.0.0",
   "scripts": {
-    "vercel-build": "cd backend-nest && npm install && npx prisma generate && npm run build"
+    "vercel-build": "cd backend-nest && npm install && npx prisma generate && npm run build",
+    "build": "cd backend-nest && npm install && npx prisma generate && npm run build",
+    "start": "cd backend-nest && npm run start:prod"
   }
 }
