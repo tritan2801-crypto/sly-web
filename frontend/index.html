@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLY CLOTHING | Minimalist Streetwear for Gen Z</title>
+    
+    <!-- Google Fonts: Outfit for sleek, geometric, urban typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#FFFFFF',
+                        accent: '#D9383A', // Crimson Red
+                        neutralMuted: '#F5F5F5',
+                        borderMuted: '#E0E0E0',
+                        bodyText: '#333333'
+                    },
+                    borderRadius: {
+                        none: '0px',
+                        sm: '2px',
+                        DEFAULT: '4px',
+                        md: '4px',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Scoped Core Styles -->
+    <style>
+        /* Modern Scrollbar - Edgy Black/Gray */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F5F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+            border-radius: 0px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D9383A;
+        }
+
+        /* Hide scrollbars completely in the left side drawer */
+        #left-menu-drawer *::-webkit-scrollbar {
+            display: none !important;
+        }
+        #left-menu-drawer * {
+            -ms-overflow-style: none !important;  /* IE and Edge */
+            scrollbar-width: none !important;  /* Firefox */
+        }
+
+        /* Transparent Header Mode for Home Page Hero lookbook */
+        header.header-transparent-theme {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            box-shadow: none !important;
+        }
+        header.header-transparent-theme #navbar-menu-trigger,
+        header.header-transparent-theme #navbar-profile-btn,
+        header.header-transparent-theme #navbar-cart-trigger,
+        header.header-transparent-theme a,
+        header.header-transparent-theme input {
+            color: #ffffff !important;
+        }
+        header.header-transparent-theme svg,
+        header.header-transparent-theme i {
+            color: #ffffff !important;
+            stroke: #ffffff !important;
+        }
+        header.header-transparent-theme .border-primary {
+            border-color: #ffffff !important;
+        }
+        header.header-transparent-theme input::placeholder {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        /* Image hover fade utility */
+        .image-hover-container img {
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            border: 2px solid #E0E0E0;
+            border-top: 2px solid #000000;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-bodyText antialiased min-h-screen flex flex-col font-sans select-none">
+
+    <!-- SPA Root Mount Point -->
+    <div id="app" class="flex flex-col min-h-screen"></div>
+
+    <!-- Application Entry Module -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

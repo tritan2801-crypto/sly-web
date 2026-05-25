@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+backend-nest/node_modules/
+/node_modules
+/backend-nest/node_modules
+
+# Build outputs
+dist/
+backend-nest/dist/
+/dist
+/backend-nest/dist
+
+# Environment variables
+.env
+backend-nest/.env
+*.env
+
+# IDE / Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vercel deployment cache
+.vercel/
+.vercel
